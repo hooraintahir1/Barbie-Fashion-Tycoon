@@ -3,4 +3,5 @@ A simulation game built using Object-Oriented Programming concepts where players
 
 # Architecture
 ## High-Level Diagram
-![alt text](https://github.com/[hooraintahir1]/[Barbie-Fashion-Tycoon]/blob/[branch]/Project.drawio.svg?raw=true)
+![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/Project.drawio.svg?raw=true)
+
