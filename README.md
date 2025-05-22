@@ -18,7 +18,7 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 |**FashionShow**| Evaluates outfits and calculates rewards|
 
 ## UML
-![UML](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/uml.svg)
+![UML](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/uml.1.png)
 
 ## 👠 How To Play
 1. Start the game
