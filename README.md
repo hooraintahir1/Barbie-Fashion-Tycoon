@@ -24,4 +24,9 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 4. Participate in fashion shows
 5. Earn money and level up to unlock new outfits
 
+## Technologies Used
+- C++
+- Object-Oriented Design
+- Console I/O (GUI version)
+- draw.io for the flowchart
 
