@@ -17,4 +17,11 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 |**GameManager**| Controls game logic and flow|
 |**FashionShow**| Evaluates outfits and calculates rewards|
 
+## 👠 How To Play
+1. Start the game
+2. View catalog and buy outfits by name
+3. Store outfits in your inventory
+4. Participate in fashion shows
+5. Earn money and level up to unlock new outfits
+
 
