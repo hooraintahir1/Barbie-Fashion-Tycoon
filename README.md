@@ -5,7 +5,5 @@ A simulation game built using Object-Oriented Programming concepts where players
 ## High-Level Diagram
 ![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/Project.drawio.svg)
 
-## Core Ideas
-1) Players use Barbie’s creativity to design unique outfits by choosing styles, names, and trend scores, which are added to the boutique's inventory.
-2) Players select and present outfits in fashion shows to gain fame, and boost Barbie's designer level, helping expand the boutique’s success.
-3) The game uses a menu-driven or GUI interface to guide players through designing, and showcasing fashion in a cycle that simulates real-world fashion business dynamics.
+## Core Features
+You start with a fixed amount of money and a list of fashionable outfits to choose from. Select outfits by name, purchase them, and store them in your inventory. Enter fashion shows to display your outfits—more expensive outfits earn more points and money. As you gain fame and funds, you unlock new levels with premium fashion collections.
