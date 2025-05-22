@@ -17,6 +17,9 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 |**GameManager**| Controls game logic and flow|
 |**FashionShow**| Evaluates outfits and calculates rewards|
 
+## UML
+![UML] 
+
 ## 👠 How To Play
 1. Start the game
 2. View catalog and buy outfits by name
