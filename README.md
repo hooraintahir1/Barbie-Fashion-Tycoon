@@ -3,7 +3,7 @@ A simulation game built using Object-Oriented Programming concepts where players
 
 # Architecture
 ## High-Level Diagram
-![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/Project.drawio.svg?raw=true)
+![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/Project.drawio.svg)
 
 ## Core Ideas
 1) Players use Barbie’s creativity to design unique outfits by choosing styles, names, and trend scores, which are added to the boutique's inventory.
