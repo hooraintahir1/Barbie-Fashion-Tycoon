@@ -8,6 +8,13 @@ A simulation game built using Object-Oriented Programming concepts where players
 ## 👗 Game Concept
 You start with a fixed amount of money and a list of fashionable outfits to choose from. Select outfits by name, purchase them, and store them in your inventory. Enter fashion shows to display your outfits—more expensive outfits earn more points and money. As you gain fame and funds, you unlock new levels with premium fashion collections.
 
+## ✨ Core Features
+- Purchase stylish outfits with in-game currency
+- Store and manage outfits using an inventory system
+- Compete in fashion shows to earn rewards
+- Progress through levels and unlock new outfits
+- Demonstrates real OOP concepts: classes, objects, encapsulation, and inheritance
+
 ## OOP Classes
 | Classes   | Purpose |
 | -------   | ------- |
