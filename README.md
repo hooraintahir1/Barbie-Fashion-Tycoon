@@ -28,5 +28,5 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 - C++
 - Object-Oriented Design
 - Console I/O (GUI version)
-- draw.io for the flowchart
+- Flowchart created with [draw.io](https://draw.io)
 
