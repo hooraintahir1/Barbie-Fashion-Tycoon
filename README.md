@@ -3,7 +3,7 @@ A simulation game built using Object-Oriented Programming concepts where players
 
 # Architecture
 ## Diagram
-![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/Project.drawio.svg)
+![High-Level Diagram](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/docs/Project.drawio.svg)
 
 ## 👗 Game Concept
 You start with a fixed amount of money and a list of fashionable outfits to choose from. Select outfits by name, purchase them, and store them in your inventory. Enter fashion shows to display your outfits—more expensive outfits earn more points and money. As you gain fame and funds, you unlock new levels with premium fashion collections.
