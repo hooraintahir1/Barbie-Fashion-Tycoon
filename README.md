@@ -34,6 +34,14 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 4. Participate in fashion shows
 5. Earn money and level up to unlock new outfits
 
+## ⭐ Level 1
+1) Buy at least 2 outfits from the catalog.
+2) Earn a minimum of 30 score by participating in a fashion show.
+3) Own at least one “Street Style” outfit.
+4) Complete all this within the level.
+
+## 🌟 Level 2
+
 ## Technologies Used
 - C++
 - Object-Oriented Design
