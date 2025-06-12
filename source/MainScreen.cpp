@@ -1,66 +1,84 @@
-#include "MainScreen.h"
+// ───────────────────────── MainScreen.h ──────────────────────────
+#pragma once
+#include <raylib.h>
+#include <string>
+#include <functional>
 
-MainScreen::MainScreen() {
-    startGame = false;
+// Small RAII helpers ---------------------------------------------------------
+struct ScopedTexture {
+    Texture2D tex{};
+    ScopedTexture() = default;
+    explicit ScopedTexture(const std::string& file) { tex = LoadTexture(file.c_str()); }
+    ScopedTexture(const ScopedTexture&)            = delete;
+    ScopedTexture& operator=(const ScopedTexture&) = delete;
+    ScopedTexture(ScopedTexture&& other) noexcept  { tex = other.tex; other.tex.id = 0; }
+    ~ScopedTexture()                               { if (tex.id) UnloadTexture(tex); }
+    operator Texture2D&() { return tex; }
+};
+
+struct ScopedSound {
+    Sound snd{};
+    explicit ScopedSound(const std::string& file) { snd = LoadSound(file.c_str()); }
+    ScopedSound(const ScopedSound&)            = delete;
+    ScopedSound& operator=(const ScopedSound&) = delete;
+    ~ScopedSound()                             { if (snd.frameCount) UnloadSound(snd); }
+    operator Sound&() { return snd; }
+};
+
+// MainScreen -----------------------------------------------------------------
+class MainScreen {
+public:
+    struct Props {
+        std::string backgroundPath = "pink.jpg";
+        std::string logoPath       = "barbieLogo.png";
+        std::string clickPath      = "click.wav";
+        Color      baseBtnColor    = DARKGREEN;
+        Color      hoverBtnColor   = GREEN;
+        Color      borderColor     = MAGENTA;
+        Color      textColor       = DARKPURPLE;
+        Vector2    btnSizeRatio    = {0.25f, 0.12f};   // % of window (w,h)
+        float      logoHeightRatio = 0.35f;            // % of window height
+        int        fontSize        = 30;
+    };
+
+    explicit MainScreen(const Props& p = {});
+    void   update(float dt);               // animations, hover state
+    void   draw() const;                   // render everything
+    void   handleClick(Vector2 mouse);     // call from your input code
+    bool   shouldStartGame() const { return _startGame; }
+    void   reset()                { _startGame = false; _anim = 0.0f; }
+
+private:
+    Props        _cfg;
+    ScopedTexture _bg, _logo;
+    ScopedSound   _click;
+    Rectangle     _btn{};                  // recalculated each frame
+    bool          _hover      = false;
+    bool          _startGame  = false;
+    float         _anim       = 0.0f;      // 0 → 1 logo slide‑in
+};
+MainScreen menu;
+
+void Init()
+{
+    InitWindow(1280, 720, "My Game");
+    InitAudioDevice();
+    menu = MainScreen();          // default props, or pass custom
 }
 
-MainScreen::~MainScreen() {
-}
+void UpdateDrawFrame()
+{
+    const float dt = GetFrameTime();
+    menu.update(dt);
 
-void MainScreen::Load() {
-    logo = LoadTexture("barbieLogo.png");
-    background = LoadTexture("pink.jpg");
-    clickSound = LoadSound("click.wav");
-    playButton = { 300, 300, 200, 60 };
-    startGame = false;
-}
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    menu.draw();
+    EndDrawing();
 
-void MainScreen::Unload() {
-    UnloadTexture(logo);
-    UnloadTexture(background);
-    UnloadSound(clickSound);
-}
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+        menu.handleClick(GetMousePosition());
 
-void MainScreen::Draw() {
-    Rectangle source = { 0, 0, (float)background.width, (float)background.height };
-    Rectangle dest = { 0, 0, 800, 600 };
-    DrawTexturePro(background, source, dest, { 0, 0 }, 0.0f, WHITE);
-
-    float targetHeight = 250.0f;
-    float scale = targetHeight / logo.height;
-    float logoWidthScaled = logo.width * scale;
-
-    float logoX = playButton.x + (playButton.width - logoWidthScaled) / 2;
-    float logoY = playButton.y - targetHeight - 20;
-
-    DrawTextureEx(logo, { logoX, logoY }, 0.0f, scale, WHITE);
-
-    Color btnColor = DARKGREEN;
-    Color textColor = DARKPURPLE;
-
-    DrawRectangleRec(playButton, btnColor);
-    DrawRectangleLinesEx(playButton, 2, MAGENTA);
-
-    const char* text = "Play";
-    int fontSize = 30;
-    int textWidth = MeasureText(text, fontSize);
-    int textX = playButton.x + (playButton.width - textWidth) / 2;
-    int textY = playButton.y + (playButton.height - fontSize) / 2;
-
-    DrawText(text, textX, textY, fontSize, textColor);
-}
-
-void MainScreen::HandleClick(Vector2 mouse) {
-    if (CheckCollisionPointRec(mouse, playButton)) {
-        PlaySound(clickSound);
-        startGame = true;
-    }
-}
-
-bool MainScreen::ShouldStartGame() const {
-    return startGame;
-}
-
-void MainScreen::SetBackground(Texture2D bg) {
-    background = bg;
+    if (menu.shouldStartGame())
+        changeToGameplayState();
 }
