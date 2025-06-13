@@ -35,15 +35,14 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 5. Earn money and level up to unlock new outfits
 
 ## ⭐ Level 1
-1) Buy at least 2 outfits from the catalog.
-2) Earn a minimum of 30 score by participating in a fashion show.
-3) Own at least one “Street Style” outfit.
-4) Complete all this within the level.
+1) Browse the Outfit Catalog and select any 1 outfit you like.
+2) Your selected outfit reveals your Fashion Personality.
+3) Watch the fashion show to see how your choice reflects your style identity.
 
 ## 🌟 Level 2
 1) Players must select exactly 2 outfits to continue.
 2) After selecting outfits, players must choose exactly 2 shoes.
-3) Each shoe has a matching outfit type (e.g., "Glam", "Sporty").
+3) Each shoe has a matching outfit type.
 4) The first selected outfit is matched with the first selected shoe, and the second with the second.
 5) If an outfit matches its paired shoe, the player earns bonus points.
 6) If they don't match, the player receives no bonus.
