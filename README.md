@@ -41,6 +41,12 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 4) Complete all this within the level.
 
 ## 🌟 Level 2
+1) Players must select exactly 2 outfits to continue.
+2) After selecting outfits, players must choose exactly 2 shoes.
+3) Each shoe has a matching outfit type (e.g., "Glam", "Sporty").
+4) The first selected outfit is matched with the first selected shoe, and the second with the second.
+5) If an outfit matches its paired shoe, the player earns bonus points.
+6) If they don't match, the player receives no bonus.
 
 ## Technologies Used
 - C++
