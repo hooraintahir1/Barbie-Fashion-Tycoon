@@ -51,4 +51,5 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 - Object-Oriented Design
 - Console I/O (GUI version)
 - Flowchart created with [draw.io](https://draw.io)
+- Raylib
 
