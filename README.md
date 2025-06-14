@@ -19,10 +19,16 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 | Classes   | Purpose |
 | -------   | ------- |
 |**Outfits**| Defines outfit properties like name, price, and score|
-|**Inventory**| Manages outfit storage and retrieval|
-|**Player**| Tracks player's money, score, and inventory|
+|**Inventory**| Stores and manages outfits selected by the player, including total score computation and category checks |
+|**Shoes**| Represents a shoe item with name, style category, image, and bonus value.|
 |**GameManager**| Controls game logic and flow|
-|**FashionShow**| Evaluates outfits and calculates rewards|
+|**FashionShow**| Reveals the personality type of the player with the description.|
+|**MainScreen**| Handles the game's welcome screen UI, logo, background, and Play button interaction.|
+|**Play**| Maintains the player’s current game state, including inventory, money, score, and level progression.|
+|**FinalFashionShow**| The ultimate challenge level; evaluates full outfit-shoe combinations for style synergy and bonuses.|
+|**Screen1, Screen2, Screen4**| Represent different game levels/screens with unique rules and interaction logic (e.g., selecting outfits or shoes).|
+|**OutfitCatalog**| Provides the list of all purchasable outfits in the game.|
+|**ShoeCatalog**| Provides the list of available shoes for selection in the shoe selection screen.|
 
 ## UML
 ![UML](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/docs/uml.svg)
