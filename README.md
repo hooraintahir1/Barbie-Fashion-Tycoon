@@ -28,11 +28,10 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 ![UML](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/docs/uml.svg)
 
 ## 👠 How To Play
-1. Start the game
-2. View catalog and buy outfits by name
-3. Store outfits in your inventory
-4. Participate in fashion shows
-5. Earn money and level up to unlock new outfits
+1. Click Start to begin your fashion journey!
+2. Explore the Outfit Catalog and purchase outfits by name.
+3. Your purchases are saved in your personal Inventory.
+4. Enter Fashion Shows to showcase your style and earn money.
 
 ## ⭐ Level 1
 1) Browse the Outfit Catalog and select any 1 outfit you like.
