@@ -33,6 +33,14 @@ You start with a fixed amount of money and a list of fashionable outfits to choo
 ## UML
 ![UML](https://github.com/hooraintahir1/Barbie-Fashion-Tycoon/blob/main/docs/uml.svg)
 
+| Requirement | Implementation Example |
+| ----------- | ---------------------- |
+|**Inheritance**| Screen1, Screen2, and Screen4 are different gameplay phases handled as independent screen classes.|
+|**Polymorphism**| Different screen classes (Screen1, Screen2, Screen4) implement their own Load(), Draw(), and Unload() methods.|
+|**Composition**| GamePlay is composed of an Inventory, which in turn contains multiple Outfit objects.|
+|**Aggregation**| GameManager uses GamePlay and OutfitCatalog to drive game logic and store session state.|
+|**Association**| Screen4 interacts with ShoeCatalog, GamePlay, and invokes the final fashion show logic.|
+
 ## 👠 How To Play
 1. Click Start to begin your fashion journey!
 2. Explore the Outfit Catalog and purchase outfits by name.
