@@ -1,0 +1,27 @@
+# Build files
+build/
+*.o
+*.obj
+*.exe
+*.out
+
+# Ignore CLion / IntelliJ project files
+.idea/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore user settings
+*.log
+
+# Raylib-generated
+*.dll
+*.lib
+*.pdb
+
+
